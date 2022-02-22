@@ -1,0 +1,28 @@
+import random
+import os
+
+singular = [""," primero", " segundo", " tercero", " cuarto", " quinto", " sexto", " septimo", " octavo", " noveno"]
+decimal = [""," decimo", " vigesimo", " trigesimo", " cuadragesimo", " quincuagesimo", " sexagesimo", " septuagesimo", " octogesimo", " nonagesimo"]
+centimal = ["","cente", "ducente", "tricente", "cuadringente", "quingente", "sexcente", "septingente", "octingente", "noningente", "mile"]
+simo = "simo"
+
+n1 = random.randrange(1,11)
+n2 = random.randrange(0,9)
+n3 = random.randrange(0,9)
+
+number = int(str(n1) + str(n2) + str(n3))
+print(number)
+print(f"\n")
+
+key = centimal[n1] + "simo" + decimal[n2] + singular[n3]
+
+answer = input()
+
+print ("your answer: " + answer)
+print ("correct answer: " + key)
+
+if key == answer:
+    print("Bien hecho!")
+else:
+    print("intentalo de nuevo!")
+
